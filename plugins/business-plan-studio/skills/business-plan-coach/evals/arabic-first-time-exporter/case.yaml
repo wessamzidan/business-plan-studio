@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: arabic-first-time-exporter
+expected_outcome: |
+  An Arabic welcome that explains the way of working and the four claim labels, teaches why the plan's reader matters, infers the business type and country, asks at most one open question (other questions are quick options), shows no example yet, invents no figures and starts a plan_state.json file.

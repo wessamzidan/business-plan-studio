@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: quick-draft-bakery
+expected_outcome: |
+  A short draft covering every module, built only from the three facts given, with every other item marked To confirm or Estimate, ending with prioritised open questions and an offer to coach the gaps; the draft is saved in plan_state.json.

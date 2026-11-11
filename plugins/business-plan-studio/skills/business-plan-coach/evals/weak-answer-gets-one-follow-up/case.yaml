@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: weak-answer-gets-one-follow-up
+expected_outcome: |
+  The coach reads the state file, responds to the weak answer with a short checklist, asks exactly one follow-up question for the biggest gap (who buys first), does not show an example because none was requested, does not rewrite the answer with invented facts, and does not mark the section done.
+context:
+  scaffold_script: place-files.sh

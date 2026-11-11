@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cafe-model-from-inputs
+expected_outcome: |
+  A model.json is written in the fin_model format from exactly the inputs given, fin_model.py is run, and the reply leads with the cash low point, break-even month and funding need, shows a yearly table, runs a downside case, labels inputs (POS figures Verified, growth Estimate, loan Planned), reports the loan instalment and asks the founder to confirm or adjust.

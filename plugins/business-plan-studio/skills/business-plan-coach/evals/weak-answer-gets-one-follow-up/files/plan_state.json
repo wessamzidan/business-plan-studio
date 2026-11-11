@@ -1,0 +1,117 @@
+{
+  "schema_version": 2,
+  "created": "2026-11-10T21:26:05",
+  "updated": "2026-11-10T21:26:05",
+  "settings": {
+    "language": "en",
+    "level": "new",
+    "mode": "guided",
+    "audience": "bank",
+    "currency": "SAR",
+    "business_type": "food-service",
+    "stage": "selling",
+    "country": "Saudi Arabia"
+  },
+  "sections": {
+    "profile.name": {
+      "status": "done",
+      "text": "Shawarma Corner (fictional)",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.one_liner": {
+      "status": "done",
+      "text": "Shawarma restaurant with dine-in and delivery in Jeddah",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.business_type": {
+      "status": "done",
+      "text": "Restaurant, café, cloud kitchen or catering",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.stage": {
+      "status": "done",
+      "text": "selling",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.location": {
+      "status": "done",
+      "text": "Saudi Arabia, SAR",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.audience": {
+      "status": "done",
+      "text": "Bank or lender",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.goal": {
+      "status": "done",
+      "text": "A loan to open a second branch",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "customer.segments": {
+      "status": "done",
+      "text": "Families nearby; office workers at lunch; late-night delivery customers",
+      "label": "Estimate",
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "customer.priority_segment": {
+      "status": "doing",
+      "text": "",
+      "label": null,
+      "sources": [],
+      "updated": null,
+      "history": []
+    }
+  },
+  "numbers": {},
+  "lists": {
+    "segments": [
+      "Families nearby",
+      "Office workers at lunch",
+      "Late-night delivery customers"
+    ]
+  },
+  "assumptions": [],
+  "questions": [],
+  "log": [
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "init"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set customer.segments"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "list segments"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "status customer.priority_segment=doing"
+    }
+  ]
+}

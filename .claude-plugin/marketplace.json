@@ -1,0 +1,15 @@
+{
+  "name": "alrawaabit-business-plan-studio",
+  "owner": {
+    "name": "AlRawaabit (Wessam Zidan)"
+  },
+  "description": "Business Plan Studio by AlRawaabit: an interactive business plan mentor for Claude.",
+  "plugins": [
+    {
+      "name": "business-plan-studio",
+      "source": "./plugins/business-plan-studio",
+      "description": "Interactive business plan mentor: coaches founders of any business, in English or Arabic, with lessons, examples, tested financial calculators, market research and plan reviews.",
+      "version": "2.1.0"
+    }
+  ]
+}

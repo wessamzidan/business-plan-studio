@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: price-below-minimum
+expected_outcome: |
+  The coach runs the minimum-price calculator instead of mental arithmetic, reports a cost per hour of 200 EGP and a minimum price of 14000 EGP, says the 12000 EGP price is below it, explains why a reader cares, offers at least two ways to fix it, lets the founder choose, and saves the numbers with labels.
+context:
+  scaffold_script: place-files.sh

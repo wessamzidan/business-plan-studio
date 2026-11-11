@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: design-studio-bank-review
+expected_outcome: |
+  A review for a bank reader with a verdict and weighted score, findings by severity, the numbers rechecked in code (minimum price 14000 vs 12000 charged; 560 hours needed vs 480; revenue 1152000 vs SOM 900000; a loss of about 16000 a month), the top three fixes, and no unrequested rewrite.
+context:
+  scaffold_script: place-files.sh

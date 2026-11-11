@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: arabic-example-request
+expected_outcome: |
+  An Arabic reply that shows exactly one weak and strong example pair from a different sector than the founder's skincare brand, says the example company is fictional, explains in one line why the strong version is stronger, and asks the founder to write their own version without writing it for them.
+context:
+  scaffold_script: place-files.sh

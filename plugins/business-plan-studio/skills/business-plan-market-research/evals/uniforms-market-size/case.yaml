@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: uniforms-market-size
+expected_outcome: |
+  The reply explains TAM, SAM and SOM briefly, builds a bottom-up SOM from the founder's own figures with market_size.py or bizcalc, caps it by the stated capacity (4000 uniforms, 18 million KES), cites a real opened source for any outside figure or marks it To confirm with a research task, and invents no statistic.

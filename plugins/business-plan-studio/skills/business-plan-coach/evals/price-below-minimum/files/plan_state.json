@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "created": "2026-11-10T21:26:05",
+  "updated": "2026-11-10T21:26:05",
+  "settings": {
+    "language": "en",
+    "level": "some",
+    "mode": "guided",
+    "audience": "bank",
+    "currency": "EGP",
+    "business_type": "services",
+    "stage": "selling",
+    "country": "Egypt"
+  },
+  "sections": {
+    "profile.name": {
+      "status": "done",
+      "text": "Studio Nile Design (fictional)",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.one_liner": {
+      "status": "done",
+      "text": "Branding and packaging design for small food brands in Cairo",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.business_type": {
+      "status": "done",
+      "text": "Services (agency, consultancy, professional or B2B services)",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.stage": {
+      "status": "done",
+      "text": "selling",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.location": {
+      "status": "done",
+      "text": "Egypt, EGP",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.audience": {
+      "status": "done",
+      "text": "Bank or lender",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "customer.priority_segment": {
+      "status": "done",
+      "text": "Small food brands in Cairo with 5 to 50 employees launching packaged products",
+      "label": "Estimate",
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "offer.description": {
+      "status": "done",
+      "text": "Branding package: logo, packaging design for up to 3 products, brand guide",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "model.revenue_streams": {
+      "status": "done",
+      "text": "Branding packages (about 80%), monthly design retainers (about 20%)",
+      "label": "Estimate",
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "model.pricing": {
+      "status": "doing",
+      "text": "",
+      "label": null,
+      "sources": [],
+      "updated": null,
+      "history": []
+    }
+  },
+  "numbers": {},
+  "lists": {},
+  "assumptions": [],
+  "questions": [],
+  "log": [
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "init"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set customer.priority_segment"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set offer.description"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set model.revenue_streams"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "status model.pricing=doing"
+    }
+  ]
+}

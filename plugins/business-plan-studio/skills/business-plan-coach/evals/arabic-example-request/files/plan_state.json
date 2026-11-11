@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "created": "2026-11-10T21:26:05",
+  "updated": "2026-11-10T21:26:05",
+  "settings": {
+    "language": "ar",
+    "level": "new",
+    "mode": "guided",
+    "audience": "investor",
+    "currency": "EGP",
+    "business_type": "ecommerce-d2c",
+    "stage": "selling",
+    "country": "Egypt"
+  },
+  "sections": {
+    "profile.name": {
+      "status": "done",
+      "text": "نقاء (شركة خيالية)",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.one_liner": {
+      "status": "done",
+      "text": "علامة عناية بالبشرة بمكونات طبيعية تُباع عبر الإنترنت في مصر",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.business_type": {
+      "status": "done",
+      "text": "E-commerce or direct-to-consumer brand",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.stage": {
+      "status": "done",
+      "text": "selling",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.location": {
+      "status": "done",
+      "text": "Egypt, EGP",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "profile.audience": {
+      "status": "done",
+      "text": "Investor",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "customer.priority_segment": {
+      "status": "done",
+      "text": "نساء بين 25 و40 سنة في القاهرة والإسكندرية يشترين منتجات العناية عبر إنستغرام",
+      "label": "Estimate",
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "customer.problem": {
+      "status": "done",
+      "text": "المنتجات المستوردة مرتفعة السعر، والمحلية غير موثوقة المكونات",
+      "label": "Estimate",
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "offer.description": {
+      "status": "done",
+      "text": "سيروم وكريم مرطب وغسول، تُباع منفردة أو في باقة",
+      "label": null,
+      "sources": [],
+      "updated": "2026-11-10T21:26:05",
+      "history": []
+    },
+    "offer.value_proposition": {
+      "status": "doing",
+      "text": "",
+      "label": null,
+      "sources": [],
+      "updated": null,
+      "history": []
+    }
+  },
+  "numbers": {},
+  "lists": {},
+  "assumptions": [],
+  "questions": [],
+  "log": [
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "init"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set customer.priority_segment"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set customer.problem"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "set offer.description"
+    },
+    {
+      "at": "2026-11-10T21:26:05",
+      "event": "status offer.value_proposition=doing"
+    }
+  ]
+}

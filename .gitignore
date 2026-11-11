@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Plan files made while you use the scripts. Keep your own plan out of the repository.
+plan_state*.json
+!**/evals/**/plan_state*.json

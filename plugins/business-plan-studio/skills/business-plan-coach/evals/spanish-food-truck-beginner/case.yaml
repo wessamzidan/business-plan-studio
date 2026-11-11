@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: spanish-food-truck-beginner
+expected_outcome: |
+  A Spanish reply that infers food service, Mexico, MXN and a bank reader, explains in plain words what a bank looks for, asks one question with quick options, invents nothing and saves a state file.
