@@ -2,10 +2,10 @@
 name: business-plan-review
 description: Reviews a business plan or pitch the way a mentor, bank, investor or grant officer would, with rubric scores, red flags, numbers checks and a prioritised fix list.
 license: Apache-2.0
-compatibility: Claude.ai, Claude Code or the API. Python 3 for the scoring and calculators (standard library).
+compatibility: Claude (Claude.ai, Cowork, Claude Code, API) and other agents that support Agent Skills. Python 3 for the scoring and calculators (standard library).
 metadata:
   author: AlRawaabit (Wessam Zidan)
-  version: "2.1.0"
+  version: "2.2.0"
   suite: Business Plan Studio
 ---
 

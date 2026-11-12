@@ -2,10 +2,10 @@
 name: business-plan-coach
 description: Interactive mentor that coaches founders of any business through a complete business plan, one question at a time, teaching and giving examples. English or Arabic. Use for any business plan task.
 license: Apache-2.0
-compatibility: Claude.ai, Claude Code or the API. Calculators need Python 3 (standard library only). Web search is optional, for market facts.
+compatibility: Claude (Claude.ai, Cowork, Claude Code, API) and other agents that support Agent Skills. Calculators need Python 3 (standard library only). Web search is optional, for market facts.
 metadata:
   author: AlRawaabit (Wessam Zidan)
-  version: "2.1.0"
+  version: "2.2.0"
   suite: Business Plan Studio
 ---
 

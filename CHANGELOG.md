@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.0 (November 2026)
+
+Install anywhere: the same four skills now install in other agents that read the Agent Skills format.
+
+- **Added:** `install.py`, which copies the skills into the skills folder of Claude Code, Codex, OpenCode, Antigravity or Hermes, or into any folder you name. It can preview (`--dry-run`) and remove (`--uninstall`), and it never overwrites a folder that belongs to something else.
+- **Added:** `INSTALL.md`, with the steps for every agent, and instructions for AI agents, so a person can hand the files to their agent and let it install the skills.
+- **Added:** a "How a session works" walk-through in the README, and three installer tests (24 tests in all).
+- **Changed:** each skill's compatibility note now names other agents. The coaching content and the calculators are the same as in 2.1.0.
+- **Note:** the skills were built and tested with Claude. For other agents, the folder locations follow each agent's documentation and the installer is tested, but the skills have not yet been run inside those agents.
+
 ## 2.1.0 (November 2026)
 
 Second review pass: a line-by-line audit, a new automated test suite and more test conversations.

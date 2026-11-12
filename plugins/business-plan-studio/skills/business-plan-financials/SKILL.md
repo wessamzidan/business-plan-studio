@@ -2,10 +2,10 @@
 name: business-plan-financials
 description: Builds and explains business plan financials for any business, step by step, covering unit economics, pricing, break-even, monthly cash flow, scenarios and funding need with tested calculators.
 license: Apache-2.0
-compatibility: Claude.ai, Claude Code or the API. Needs Python 3 (standard library). The optional Excel export needs openpyxl.
+compatibility: Claude (Claude.ai, Cowork, Claude Code, API) and other agents that support Agent Skills. Needs Python 3 (standard library). The optional Excel export needs openpyxl.
 metadata:
   author: AlRawaabit (Wessam Zidan)
-  version: "2.1.0"
+  version: "2.2.0"
   suite: Business Plan Studio
 ---
 

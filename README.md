@@ -1,10 +1,10 @@
 # Business Plan Studio
 
-[![Tests](https://github.com/wessamzidan/business-plan-studio/actions/workflows/tests.yml/badge.svg)](https://github.com/wessamzidan/business-plan-studio/actions/workflows/tests.yml) ![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-0B6B4F) ![Version 2.1.0](https://img.shields.io/badge/version-2.1.0-0B6B4F)
+[![Tests](https://github.com/wessamzidan/business-plan-studio/actions/workflows/tests.yml/badge.svg)](https://github.com/wessamzidan/business-plan-studio/actions/workflows/tests.yml) ![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-0B6B4F) ![Version 2.2.0](https://img.shields.io/badge/version-2.2.0-0B6B4F)
 
 **An interactive business plan mentor for Claude: four Agent Skills that coach founders of any business, in English or Arabic, from first idea to a plan a bank, investor, incubator or grant programme will trust.**
 
-Created by **AlRawaabit (Wessam Zidan)**. Licensed under Apache 2.0. Version 2.1.0.
+Created by **AlRawaabit (Wessam Zidan)**. Licensed under Apache 2.0. Version 2.2.0.
 
 ## What it does
 
@@ -33,12 +33,16 @@ Each skill works on its own; together they share the same plan file.
 
 ## Install
 
-Code execution must be enabled for the calculators. Each skill is a folder containing `SKILL.md`; the `claude-ai-uploads` folder has one ready-made ZIP per skill.
+Each skill is a folder containing `SKILL.md`, in the open Agent Skills format. The steps for every agent are in [INSTALL.md](INSTALL.md); this is the short version.
+
+**Let your agent install it.** If your agent can run commands on your computer (Claude Code, Codex, OpenCode, Antigravity, Hermes and similar), paste this:
+
+> Install Business Plan Studio from https://github.com/wessamzidan/business-plan-studio. Read AGENTS.md in that repository and follow it. Tell me what you will copy and where before you do it.
 
 **Claude.ai (web, desktop, mobile)**
-1. Turn on code execution and file creation in Settings.
+1. Turn on code execution and file creation in Settings. The calculators need code execution.
 2. Open Customize, then Skills (claude.ai/customize/skills), and choose to upload a skill.
-3. Upload each ZIP from `claude-ai-uploads/` (start with `business-plan-coach.zip`) and switch the skills on.
+3. Upload each ZIP from `claude-ai-uploads/` (start with `business-plan-coach.zip`) and switch the skills on. If you have an older `business-plan-coach` skill, delete it first.
 Availability of custom skills depends on your plan; see Anthropic's help centre.
 
 **Claude Cowork (desktop app)**
@@ -46,7 +50,10 @@ Open `business-plan-studio.plugin` in a Cowork chat and accept the plugin, or up
 
 **Claude Code**
 - As a plugin from GitHub: run `/plugin marketplace add wessamzidan/business-plan-studio`, then `/plugin install business-plan-studio@alrawaabit-business-plan-studio`.
-- Or copy the four folders from `plugins/business-plan-studio/skills/` into `~/.claude/skills/` (personal) or `.claude/skills/` (one project).
+- From this folder: run `python3 install.py --agent claude-code`. It copies the four skill folders into `~/.claude/skills/`. Add `--project PATH` to install into one project instead.
+
+**Codex, OpenCode, Antigravity, Hermes and other agents**
+Run `python3 install.py --agent codex` in this folder (or `opencode`, `antigravity`, `hermes`). It copies the four skill folders into that agent's skills folder and changes nothing else. `python3 install.py --list` shows every agent it knows, and `--dest PATH` installs into any other skills folder. You need Python 3 on your computer for the calculators. The skills were built and tested with Claude; in other agents they use the same open format but have not been run there yet.
 
 **Claude API**
 Upload each skill folder with the Skills API (`/v1/skills`) and attach the skill ids to your requests with the code execution tool. API containers have no internet access, so market research falls back to the founder's own sources.
@@ -62,13 +69,22 @@ Upload each skill folder with the Skills API (`/v1/skills`) and attach the skill
 
 Useful things to say during a session: *map* · *next* · *skip* · *later* · *example* · *explain break-even* · *simpler* · *challenge me* · *draft it for me* · *check my numbers* · *what's missing* · *export*.
 
-<!-- concept:start -->
+## How a session works
+
+1. **Start.** Say what your business is and where. The coach asks who will read the plan (a bank, an investor, an incubator, a grant programme), what stage you are at, and how much teaching you want.
+2. **See your plan map.** The plan has 14 modules, in the order your reader cares about. A full plan takes about three hours over several sittings; a quick draft takes about fifteen minutes. You choose where to start.
+3. **Answer one question at a time.** Each turn says where you are, why the question matters and what to think about. You answer first.
+4. **Get feedback.** The coach checks your answer against a short checklist, asks at most two follow-up questions, and offers a tighter version in your own words. You keep it, edit it, or keep yours.
+5. **Let it calculate.** Give your numbers one at a time. The scripts work out prices, break-even, cash flow and funding need, and 14 checks warn you when two numbers disagree.
+6. **Stop when you like.** The coach recaps, tells you what to bring next time, and hands you a file called `plan_state.json`. Keep it.
+7. **Come back.** A new chat has no memory. Give it `plan_state.json` and say "continue my plan".
+8. **Export.** Say "export" for the full plan for your reader, a one-page summary, a canvas, a pitch deck outline, answers for an online form, and the model as a spreadsheet.
+
 ## Design concept
 
 The skills work in chat today. This repository also holds a design for a guided app on top of them: one path of 14 steps in 5 sittings, one question at a time, in English and Arabic, on a phone or a laptop. It is a design only; nothing in it is built yet. See [`design/`](design/) for the specification and every screen.
 
 ![The coaching step: why it matters, one question, an answer box and coach feedback](design/screenshots/step.png)
-<!-- concept:end -->
 
 ## Privacy
 

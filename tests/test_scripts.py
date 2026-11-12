@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Known-answer tests for the Business Plan Studio scripts.
+"""Known-answer tests for the Business Plan Studio scripts, and tests for the installer.
 
 Run from the repository root:  python3 tests/test_scripts.py
 Every expected value below was worked out independently of the code under test.
@@ -390,6 +390,72 @@ class MarketAndScore(unittest.TestCase):
         self.assertEqual(score_plan.run({"audience": "investor", "ratings": {"market": 1}})["verdict"], "Not ready")
         with self.assertRaises(ValueError):
             score_plan.run({"audience": "bank", "ratings": {"market": 9}})
+
+
+INSTALLER = os.path.abspath(os.path.join(HERE, "..", "install.py"))
+SKILL_NAMES = ["business-plan-coach", "business-plan-financials", "business-plan-market-research",
+               "business-plan-review"]
+
+
+@unittest.skipUnless(os.path.isfile(INSTALLER) and os.path.isdir(SKILLS), "install.py sits beside a built tree only")
+class Installer(unittest.TestCase):
+    def run_installer(self, *args, home=None):
+        env = dict(os.environ)
+        if home:
+            env.update(HOME=home, USERPROFILE=home)
+        return subprocess.run([sys.executable, INSTALLER, *args], capture_output=True, text=True, env=env)
+
+    def test_install_update_and_uninstall(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            dest = os.path.join(tmp, "skills")
+            r = self.run_installer("--dest", dest, "--dry-run")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertFalse(os.path.exists(dest))  # a dry run changes nothing
+            r = self.run_installer("--dest", dest)
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertEqual(sorted(os.listdir(dest)), SKILL_NAMES)
+            for n in SKILL_NAMES:
+                self.assertTrue(os.path.isfile(os.path.join(dest, n, "SKILL.md")))
+                self.assertTrue(os.path.isfile(os.path.join(dest, n, "scripts", "plan_state.py")))
+                self.assertFalse(os.path.exists(os.path.join(dest, n, "evals")))  # test cases are not installed
+            self.assertIn("Calculators: OK", r.stdout)
+            r = self.run_installer("--dest", dest)  # running it again updates in place
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertEqual(r.stdout.count("replaces"), 4)
+            r = self.run_installer("--dest", dest, "--uninstall")
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertEqual(os.listdir(dest), [])
+
+    def test_never_touches_a_folder_that_is_not_ours(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            other = os.path.join(tmp, "business-plan-coach")
+            os.makedirs(other)
+            note = os.path.join(other, "notes.txt")
+            with open(note, "w") as fh:
+                fh.write("mine")
+            r = self.run_installer("--dest", tmp)
+            self.assertEqual(r.returncode, 1)
+            self.assertEqual(os.listdir(tmp), ["business-plan-coach"])  # nothing was copied at all
+            self.assertTrue(os.path.isfile(note))
+            r = self.run_installer("--dest", tmp, "--uninstall")
+            self.assertEqual(r.returncode, 0)
+            self.assertTrue(os.path.isfile(note))
+
+    def test_each_agent_gets_its_documented_folder(self):
+        user = {"claude-code": ".claude/skills", "codex": ".agents/skills", "opencode": ".config/opencode/skills",
+                "antigravity": ".gemini/config/skills", "hermes": ".hermes/skills", "agents": ".agents/skills"}
+        project = {"claude-code": ".claude/skills", "codex": ".agents/skills", "opencode": ".opencode/skills",
+                   "antigravity": ".agents/skills", "hermes": ".hermes/skills", "agents": ".agents/skills"}
+        for agent in user:
+            with tempfile.TemporaryDirectory() as home, tempfile.TemporaryDirectory() as proj:
+                r = self.run_installer("--agent", agent, home=home)
+                self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+                folder = os.path.join(home, *user[agent].split("/"))
+                self.assertEqual(sorted(os.listdir(folder)), SKILL_NAMES, agent)
+                r = self.run_installer("--agent", agent, "--project", proj, home=home)
+                self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+                folder = os.path.join(proj, *project[agent].split("/"))
+                self.assertEqual(sorted(os.listdir(folder)), SKILL_NAMES, agent)
 
 
 if __name__ == "__main__":

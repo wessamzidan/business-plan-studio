@@ -17,6 +17,7 @@ Thank you for helping Business Plan Studio work better for founders everywhere.
 3. **Dated facts need a source and a date.** Present them as starting points to confirm with an accountant or lawyer, never as advice.
 4. **One question per coaching reply.** Keep each `SKILL.md` short and put detail in its `references/` folder.
 5. **Run the tests** before you open a pull request: `python3 tests/test_scripts.py`. A change to a calculator needs a new test.
+6. **Leave the packaged files alone.** The ZIPs in `claude-ai-uploads/` and `business-plan-studio.plugin` are rebuilt by the maintainer at each release.
 
 ## How to propose a change
 

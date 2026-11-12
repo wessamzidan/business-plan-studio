@@ -2,10 +2,10 @@
 name: business-plan-market-research
 description: Researches and sizes markets for business plans, covering TAM, SAM and SOM, competitors, customer interviews and local rules, with cited, dated sources and no invented figures.
 license: Apache-2.0
-compatibility: Claude.ai, Claude Code or the API. Web search makes it far more useful; without it, it guides the founder's own research. Python 3 for market_size.py.
+compatibility: Claude (Claude.ai, Cowork, Claude Code, API) and other agents that support Agent Skills. Web search makes it far more useful; without it, it guides the founder's own research. Python 3 for market_size.py.
 metadata:
   author: AlRawaabit (Wessam Zidan)
-  version: "2.1.0"
+  version: "2.2.0"
   suite: Business Plan Studio
 ---
 

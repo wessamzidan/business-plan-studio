@@ -166,7 +166,7 @@ Arabic and the phone layout are designed first-class, not adapted afterwards. Th
 
 ## 9. Build notes
 
-Every screen is a view of one file, `plan_state.json`, and every action calls a script that already ships in Business Plan Studio 2.1.0. The app adds no business logic of its own.
+Every screen is a view of one file, `plan_state.json`, and every action calls a script that already ships in Business Plan Studio. The app adds no business logic of its own.
 
 | Screen | Calls | Reads and writes |
 | --- | --- | --- |
